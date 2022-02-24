@@ -1,0 +1,142 @@
+.sidemenu{
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100vh;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-right: 1px solid rgb(217, 217, 217);
+}
+.sidemenu .menu-list{
+    list-style: none;
+}
+.list-item{
+    margin: 20px 0;
+    padding:7px 12px;
+    border-radius: 25px;
+    transition: background-color 0.5s ease-in-out;
+}
+.list-item:hover,
+.user-data:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.list-item:last-of-type{
+    padding: 0;
+    background-color: transparent;
+}
+.logo{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+.logo img, svg{
+    width: 2rem;
+    height: 2rem;
+}
+.home-svg{
+    width: 2.2rem;
+    height: 2.2rem;
+}
+.icon{
+    fill: #fff;
+}
+a{
+    color:#fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+a span{
+    font-size: 1.2rem;
+}
+button{
+    outline: 0;
+    border:0;
+    background-color: var(--light-blue);
+    color:#fff;
+    padding: 12px 50px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+button img{
+    display: none;
+}
+.user-data{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    cursor: pointer;
+    padding:5px 15px;
+    border-radius: 30px;
+    transition: background-color 0.5s ease-in-out;
+}
+.user-data img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.user-name{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.user-name span:nth-child(2){
+    color:rgb(126, 126, 126);
+}
+@media screen and (max-width:768px) {
+    .sidemenu{
+        width: 150px;
+    }
+    a span{
+        display: none;
+    }
+    .user-name{
+        display: none;
+    }
+    .list-item{
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .logo,
+    .user-data{
+        margin-left: 0;
+    }
+    .user-data{
+        border-radius: 50%;
+        padding: 5px;
+    }
+    button{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    button span{
+        display: none;
+    }
+    button img{
+        display: block;
+        width: 40px;
+        height: 40px;
+    }
+}
